@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Jackeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto' fantasy;
+        }
+
+        body {
+            background-color: #d3d3d3;
+            color: #000000;
+
+            /* 🔹 Centralização do site inteiro */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;     /* Centraliza verticalmente */
+            min-height: 100vh;       /* Ocupa 100% da altura da tela */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-wrapper {
+            width: 100%;
+            max-width: 1200px;   /* largura máxima */
+            background: #ffffff;    /* fundo do site */
+            border-radius: 8px;  /* bordas arredondadas */
+            overflow: hidden;    /* evita estouro dos cantos arredondados */
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-weight: 700;
+            font-size: 35px;
+        }
+
+        nav a {
+            margin-left: 12px;
+            padding: 8px;
+            border: 1px solid #000000;
+            background-color: #f28c28;
+            border-radius: 4px;
+            display: inline-block;
+            width: 120px;  
+            text-align: center;
+        }
+
+        nav a.contato {
+            border-color: #030303;
+        }
+
+        .container {
+            padding: 20px 40px;
+        }
+
+        .perfil {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .perfil img {
+            width: 150px;
+            border-radius: 10px;
+            margin-right: 50px;
+        }
+
+        .perfil-info h2 {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .perfil-info p {
+            color: rgb(61, 58, 58);
+            font-size: 20px;
+        }
+
+        .experiencias, .formacao, .conhecimento {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .experiencias h3, .formacao h3, .conhecimento h3 {
+            color: #f28c28;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+
+        .experiencia-list, .formacao-list, .conhecimento-list {
+            flex: 1;
+        }
+
+        .experiencia-item, .formacao-item, .conhecimento-item {
+            background-color: #f0f0f0;
+            padding: 15px 20px;
+            margin-bottom:45px;
+            border-radius: 8px;
+        }
+
+        .experiencia-item h4, .formacao-item h4, .conhecimento-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .experiencia-item p, .formacao-item p, .conhecimento-item p {
+            font-size: 15px;
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .formacao, .conhecimento {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 50px;
+            flex-direction: column;
+        }
+
+        .formacao-info, .conhecimento-info {
+          color: #f28c28;
+          font-size: 36px;
+          margin-right: 20px;
+          margin-bottom:45px;
+        }
+
+        .formacao-items, .conhecimento-itens {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .formacao-item, .conhecimento-item{
+            background-color: #f28c28;
+            flex: 1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .idiomas {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            background-color: #f28c28;
+            flex: 1;
+            margin-bottom:45px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .contato {
+            background-color: #030303;
+            color: #fff;
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .contato form {
+            flex: 1;
+        }
+
+        .contato form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .contato form input,
+        .contato form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .contato .info {
+            flex: 1;
+            margin-left: 50px;
+        }
+
+        .contato .info p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #020202;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <h1>Jackeline Daiane Neres de Jesus</h1>
+            <nav>
+                <a href="#experiencias">Experiências</a>
+                <a href="#formacao">Formação</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="perfil">
+                <img src="fotoperfil.png" alt="Foto de perfil">
+                <div class="perfil-info">
+                    <h2>Assistente TI</h2>
+                    <p>Localizado em Paracatu - MG 📍</p>
+                    <p>Atuo atualmente como assistente de TI tendo como principal função atender usuários internos através de solicitações via Help Desk (chamados).</p>
+                </div>
+            </section>
+
+            <div class="experiencias" id="experiencias">
+            <h3>EXPERIÊNCIAS</h3>
+            </div>
+
+            <section class="experiencias" id="experiencias">
+                
+                <div class="experiencia-list">
+                    <div class="experiencia-item">
+                        <h4>2025 - Unimed Noroeste de Minas - Assistente TI</h4>
+                        <p>Análise e resolução de problemas com softwares/hardwares</p>
+                    </div>
+                    <div class="experiencia-item">
+                        <h4>2024-2025 - Contabilidade Dias - Assistente Contábil</h4>
+                        <p>Lançamentos de Nota Fiscal de Serviço<br>Emissão Imposto (Simples Nacional)</p>
+                    </div>
+                    <div class="experiencia-item">
+                        <h4>2023-2024 - Colégio Atenas - Auxiliar Financeiro</h4>
+                        <p>Abertura e fechamento de Caixa<br>Cobrança de mensalidades em atraso<br>Venda de uniformes</p>
+                    </div>
+                    <div class="experiencia-item">
+                        <h4>2019-2023 - Pizzaria Bella Massa - Caixa</h4>
+                        <p>Abertura e fechamento de Caixa<br>Organização de pedidos para delivery<br>Pagamento para funcionários/fornecedores</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="conhecimento-info" id="conhecimento">
+                <h3>CONHECIMENTOS</h3>
+            </div>
+            <section class="conhecimento" id="conhecimento">
+            <p>Meus conhecimentos são:<p>
+                <div class = "conhecimento-itens">
+                    <div class="conhecimento-item">
+                        <h4>SQL-Server</h4>
+                        <p>Básico</p>
+                    </div>
+                    <div class="conhecimento-item">
+                        <h4>Help-Desk</h4>
+                        <p>Básico</p>
+                    </div>
+                    <div class="conhecimento-item">
+                        <h4>Pacote-Office</h4>
+                        <p>Básico</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="formacao-info" id="formacao-info">
+                <h3>FORMAÇÃO</h3>
+            </div>
+            <section class="formacao" id="formacao">
+                <p>Minha mais recente experiência acadêmica foi com a faculdade, onde hoje curso Análise e Desenvolvimento de Sistemas.</p>
+                <div class="formacao-items">
+                    <div class="formacao-item">
+                        <h4>Básico</h4>
+                        <p>Ensino Médio - Altina de Paula</p>
+                    </div>
+                    <div class="formacao-item">
+                        <h4>Tecnólogo</h4>
+                        <p>Análise e Desenvolvimento de Sistemas - IFTM</p>
+                    </div>
+                    <div class="formacao-item">
+                        <h4>Técnico</h4>
+                        <p>Administração - IFTM</p>
+                    </div>
+                    <div class="formacao-item">
+                        <h4>Idiomas</h4>
+                        <p>Português Brazil / Fluente</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contato" id="contato">
+                <form>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Seu email">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="info">
+                    <p>✉ jackelineneres123@gmail.com</p>
+                    <p>📞 (38)988159348</p>
+                    <p>📸 @jackelineneres_</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            © jackelineneres todos os direitos reservados
+        </footer>
+    </div>
+</body>
+</html>
